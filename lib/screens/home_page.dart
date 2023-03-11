@@ -7,7 +7,7 @@ import '../widgets/bottom.dart';
 import '../widgets/favorite_item.dart';
 import '../widgets/favorite_title.dart';
 import '../widgets/me_item.dart';
-import '../widgets/menu.dart';
+import '../widgets/banar.dart';
 import '../widgets/skill_item.dart';
 import '../widgets/skill_title.dart';
 
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text('INTRODUCTION', style: TextStyle(color: _isHovering[0] ? Colors.blue[200] : Colors.white,),),
+                            Text('ME', style: TextStyle(color: _isHovering[0] ? Colors.blue[200] : Colors.white,),),
                             SizedBox(height: 5),
                             //ホバー(下線)
                             Visibility(
@@ -210,10 +210,6 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                // ScrollContent(
-                //   id: '1',
-                //   child: SizedBox(height: screenSize.height / 10),
-                // ),
                 ScrollContent(
                   id: '1',
                   child: FavoriteTitle(screenSize: screenSize),
@@ -256,13 +252,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            // FavoriteTitle(screenSize: screenSize),
-            // FavoriteItem(),
-            // SizedBox(height: screenSize.height / 10),
-            // BottomBar(),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

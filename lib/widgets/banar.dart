@@ -45,22 +45,19 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                     bottom: widget.screenSize.height / 50,
                   ),
                   child:
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  //   children: generateRowElements(),
-                  // ),
                   AnimatedTextKit(
                     animatedTexts: [
+                      ResponsiveWidget.isSmallScreen(context)?
+                      ColorizeAnimatedText(
+                        'WELCOME TO MY PORTFOLIO!',
+                        textStyle: colorizeTextStyle,
+                        colors: colorizeColors,
+                      ):
                       ColorizeAnimatedText(
                         '　　　WELCOME　TO　MY　PORTFOLIO!　　　',
                         textStyle: colorizeTextStyle,
                         colors: colorizeColors,
-                      ),
-                      // ColorizeAnimatedText(
-                      //   'TO',
-                      //   textStyle: colorizeTextStyle,
-                      //   colors: colorizeColors,
-                      // ),
+                      )
                     ],
                   ),
                 ),

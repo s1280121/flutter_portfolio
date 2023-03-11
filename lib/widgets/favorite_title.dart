@@ -14,7 +14,7 @@ class FavoriteTitle extends StatelessWidget {
     return ResponsiveWidget.isSmallScreen(context)
         ? Container(
             padding: EdgeInsets.only(
-              // top: screenSize.height / 20,
+              top: screenSize.height / 20,
               bottom: screenSize.height / 20,
             ),
             width: screenSize.width,

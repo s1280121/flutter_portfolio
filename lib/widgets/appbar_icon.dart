@@ -1,6 +1,8 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:flutter/material.dart';
 
+import 'screen_size.dart';
+
 class AppbarIcon extends StatefulWidget {
   const AppbarIcon({Key? key}) : super(key: key);
 
@@ -12,8 +14,24 @@ class _AppbarIconState extends State<AppbarIcon> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
-    return
-      Row(
+    return ResponsiveWidget.isSmallScreen(context) ?
+    Row(
+      children: [
+        IconButton(
+          icon: Icon(Icons.brightness_6),
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          color: Colors.white,
+          onPressed: () {
+            EasyDynamicTheme.of(context).changeTheme();
+          },
+        ),
+        SizedBox(
+          width: screenSize.width / 200,
+        ),
+      ],
+    ) :
+    Row(
       children: [
         IconButton(
           icon: Icon(Icons.message),
@@ -36,7 +54,8 @@ class _AppbarIconState extends State<AppbarIcon> {
                   ],
                 );
               },
-            );                },
+            );
+            },
         ),
         IconButton(
           icon: Icon(Icons.brightness_6),

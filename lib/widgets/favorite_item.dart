@@ -59,7 +59,7 @@ class _FavoriteItemState extends State<FavoriteItem> {
                   : NeverScrollableScrollPhysics(),
               enlargeCenterPage: true,
               //画像の大きさ
-              aspectRatio: 30 / 8,
+              aspectRatio: 28 / 8,
               autoPlay: true,
               onPageChanged: (index, reason) {
                 setState(() {
@@ -77,7 +77,7 @@ class _FavoriteItemState extends State<FavoriteItem> {
         ),
         AspectRatio(
           //説明文の大きさ
-          aspectRatio: 30 / 8,
+          aspectRatio: 28 / 8,
           child: Center(
             child: Text(
               places[_current],
@@ -91,10 +91,10 @@ class _FavoriteItemState extends State<FavoriteItem> {
           ),
         ),
         ResponsiveWidget.isSmallScreen(context)
-            ? Container()
+            ? Container()  //smallの時はメニューなし
             : AspectRatio(
                 //下バーの大きさ
-                aspectRatio: 24 / 8,
+                aspectRatio: 23 / 8,
                 child: Center(
                   heightFactor: 1,
                   child: Align(

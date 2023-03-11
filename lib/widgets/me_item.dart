@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screen_size.dart';
+
 class AboutMe extends StatefulWidget {
   const AboutMe({Key? key, required this.screenSize}) : super(key: key);
 
@@ -23,7 +25,8 @@ class _AboutMeState extends State<AboutMe> {
             //   fontFamily: 'Montserrat',
             //   fontWeight: FontWeight.bold,
             // ),),
-            Text("My　name　is　ARA　HARUTO",
+            ResponsiveWidget.isSmallScreen(context)
+            ? Text("ARA　HARUTO",
               textAlign: TextAlign.center,
               style: TextStyle(
               fontSize: 20,
@@ -31,7 +34,16 @@ class _AboutMeState extends State<AboutMe> {
               color: Colors.white,
               fontWeight: FontWeight.bold,
                 letterSpacing: 10,
-            ),),
+            ),)
+                : Text("My　name　is　ARA　HARUTO",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'Montserrat',
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 10,
+              ),)
           ],
         ),
       ),

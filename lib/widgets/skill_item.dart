@@ -57,25 +57,24 @@ class _SkillItemState extends State<SkillItem> {
           ),
           Text("Firebaseを利用したアプリや、\n飲食店検索アプリを開発しました。",textAlign: TextAlign.center,),
           SizedBox(height: 30,),
-          Column(
-            children: [
-              Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  color: Colors.white,
-                  child: Container(
-                    width: 180,
-                    height: 80,
-                    child: Image.asset(
-                      "images/Firebase.PNG",
-                      fit: BoxFit.fitHeight,
-                    ),
-                  )
+          Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
               ),
-              Text("Authentication, Cloud Firestore, \nNotificationsなどを使ったことがあります。",textAlign: TextAlign.center,),
-            ],
+              color: Colors.white,
+              child: Container(
+                width: 180,
+                height: 80,
+                decoration: BoxDecoration(
+                  // shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: NetworkImage(
+                          "https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png"),
+                    )),
+              )
           ),
+          Text("Authentication, Cloud Firestore, \nNotificationsなどを使ったことがあります。",textAlign: TextAlign.center,),
           SizedBox(height: 10),
         ],
       ),
@@ -136,28 +135,28 @@ class _SkillItemState extends State<SkillItem> {
             ],
           ),
           SizedBox(height: 30,),
-          SizedBox(
-            // width: widget.screenSize.width/2,
-            child: Column(
-              children: [
-                Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    color: Colors.white,
-                    child: Container(
-                      width: 180,
-                      height: 80,
-                      child: Image.asset(
-                        "images/Firebase.PNG",
-                        fit: BoxFit.fitHeight,
-                      ),
-                    )
-                ),
-                Text("Authentication, Cloud Firestore, Notificationsなどを使ったことがあります。",textAlign: TextAlign.center,),
-                SizedBox(height: 10,),
-              ],
-            ),
+          Column(
+            children: [
+              Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  color: Colors.white,
+                  child: Container(
+                    width: 180,
+                    height: 80,
+                    decoration: BoxDecoration(
+                      // shape: BoxShape.circle,
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage(
+                              "https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png"),
+                        )),
+                  )
+              ),
+              Text("Authentication, Cloud Firestore, \nNotificationsなどを使ったことがあります。",textAlign: TextAlign.center,),
+              SizedBox(height: 10,),
+            ],
           ),
         ],
       ),
